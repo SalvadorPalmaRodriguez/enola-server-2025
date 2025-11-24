@@ -1,0 +1,50 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                     AYUDA - MENÚ PRINCIPAL                    ║
+╚═══════════════════════════════════════════════════════════════╝
+
+🏠 MENÚ PRINCIPAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPCIONES DISPONIBLES:
+
+1️⃣  Gestión de Servicios Tor
+   • Listar servicios Onion activos
+   • Añadir nuevos servicios web
+   • Eliminar servicios existentes
+   • Habilitar/Deshabilitar servicios
+
+2️⃣  Gestión de WordPress
+   • Generar nuevas instalaciones de WordPress
+   • Iniciar/Parar contenedores
+   • Editar configuración (puertos, SSL)
+   • Habilitar/Deshabilitar servicios
+
+3️⃣  Configuración del Sistema
+   • Habilitar/Deshabilitar Smoke Test
+   • Configurar verificación de SSH
+   • Ejecutar Smoke Test manual
+
+4️⃣  Diagnóstico
+   • Resumen rápido de servicios
+   • Estado detallado (NGINX, Tor, SSH, WordPress)
+   • Ver logs de instalación
+   • Probar configuraciones
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📌 CONSEJOS:
+
+• Usa las teclas de número directamente (sin presionar Enter)
+• Presiona '0' en cualquier menú para volver atrás
+• Presiona 'h' en cualquier menú para ver ayuda contextual
+• Las operaciones destructivas requieren confirmación
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔗 MÁS INFORMACIÓN:
+
+Documentación: /usr/share/doc/enola-server/
+Logs: /var/log/enola-server/
+Configuración: /etc/tor/enola.d/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

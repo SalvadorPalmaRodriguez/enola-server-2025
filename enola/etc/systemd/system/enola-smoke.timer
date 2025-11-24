@@ -1,0 +1,11 @@
+[Unit]
+Description=Enola Server - schedule periodic smoke test
+Documentation=/opt/enola/scripts/common/smoke_test.sh
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=5m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

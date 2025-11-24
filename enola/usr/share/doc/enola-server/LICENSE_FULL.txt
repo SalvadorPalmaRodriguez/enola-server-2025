@@ -1,0 +1,105 @@
+Contrato de Licencia de Usuario Final (EULA) – [Nombre de la Aplicación]
+
+Fecha de emisión: 2025-10-10
+Titular de los derechos: Salvador Palma Rodríguez (“Creador”)
+Contacto: [tu correo electrónico o formulario de contacto]
+
+1. Definiciones
+
+Aplicación: El software [Nombre de la Aplicación], distribuido en formato .deb.
+
+Usuario: Persona física o jurídica que descarga, instala o utiliza la Aplicación.
+
+Uso personal: Uso de la Aplicación por una persona para fines privados y no comerciales.
+
+Uso comercial: Uso de la Aplicación con fines de lucro, incluyendo integración en productos, servicios, sistemas o stacks tecnológicos.
+
+2. Concesión de licencia
+
+El Creador concede al Usuario una licencia limitada, no exclusiva, intransferible y revocable para usar la Aplicación exclusivamente para uso personal.
+
+Cualquier otro uso requiere autorización expresa y por escrito del Creador.
+
+3. Distribución y copia
+
+La Aplicación solo puede descargarse desde el sitio oficial del Creador o repositorios autorizados.
+
+Está estrictamente prohibido:
+
+Redistribuir, publicar o compartir la Aplicación o cualquier versión modificada.
+
+Transferir la licencia a terceros sin consentimiento del Creador.
+
+4. Modificaciones y obras derivadas
+
+El Usuario puede modificar la Aplicación solo para uso personal.
+
+Prohibido:
+
+Redistribuir cualquier versión modificada.
+
+Crear obras derivadas con fines comerciales o públicos sin autorización.
+
+Modificar la Aplicación para evadir responsabilidades o licencias.
+
+5. Uso comercial
+
+El uso comercial está estrictamente prohibido sin licencia explícita del Creador.
+
+Se considera uso comercial cualquier integración, distribución, venta o utilización de la Aplicación o derivadas con fines de lucro.
+
+El Creador podrá otorgar licencias comerciales bajo acuerdo escrito y condiciones económicas específicas.
+
+6. Uso educativo
+
+Instituciones educativas y docentes pueden solicitar autorización para uso educativo previo acuerdo con el Creador.
+
+Cualquier uso educativo requiere autorización escrita y no implica derecho de redistribución.
+
+7. Propiedad intelectual y marca
+
+La Aplicación y cualquier nombre, marca o logotipo relacionado son propiedad exclusiva del Creador.
+
+Prohibido:
+
+Usar el nombre o marca sin autorización.
+
+Presentar versiones modificadas bajo el nombre original sin permiso.
+
+8. Código fuente
+
+El código fuente no está disponible públicamente.
+
+El Creador puede otorgar acceso al código fuente bajo acuerdos específicos, que pueden incluir condiciones legales o económicas.
+
+9. Garantía y responsabilidad
+
+La Aplicación se proporciona “tal cual”, sin garantía de ningún tipo, expresa o implícita.
+
+El Creador no será responsable de daños directos, indirectos, incidentales, especiales, consecuentes o punitivos derivados del uso de la Aplicación.
+
+10. Violaciones de la licencia
+
+El uso no autorizado, redistribución o modificación constituye violación de derechos de propiedad intelectual.
+
+El Creador se reserva todos los derechos no otorgados expresamente en esta licencia.
+
+La violación puede resultar en acciones legales, económicas o de otro tipo.
+
+11. Ley aplicable y jurisdicción
+
+Este contrato se regirá por las leyes de España.
+
+Cualquier disputa derivada de este contrato será sometida a los tribunales competentes del domicilio del Creador.
+
+🔹 Sugerencias prácticas para implementación
+
+Distribución: Subir solo el .deb públicamente.
+
+Código fuente: Mantenerlo privado, dar acceso solo bajo acuerdos escritos.
+
+Licencias comerciales: Cada licencia debe documentarse y firmarse por escrito.
+
+Contacto: Facilitar un canal para solicitudes de licencias comerciales o educativas.
+
+Marca: Considera registrar la aplicación como marca para proteger tu nombre frente a terceros.

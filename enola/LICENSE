@@ -1,0 +1,220 @@
+ENOLA SERVER - LICENCIA DE USO NO COMERCIAL
+============================================
+
+Copyright (c) 2025 Salvador Palma Rodríguez
+
+TÉRMINOS Y CONDICIONES DE USO
+
+1. DEFINICIONES
+
+   a) "Software" se refiere al código fuente, binarios, documentación y 
+      cualquier material relacionado de Enola Server.
+   
+   b) "Uso Personal" significa el uso por individuos para fines privados,
+      educativos, de investigación o desarrollo no comercial.
+   
+   c) "Uso Comercial" incluye cualquier uso del Software con fines de 
+      lucro, en entornos empresariales, o como parte de servicios comerciales.
+   
+   d) "Obra Derivada" significa cualquier trabajo basado en el Software,
+      incluyendo modificaciones, extensiones o traducciones.
+   
+   e) "Fork Público" significa una copia del repositorio creada mediante 
+      la funcionalidad de fork de GitHub u otras plataformas similares.
+
+2. PERMISOS CONCEDIDOS
+
+   Se concede permiso, de forma gratuita, a cualquier persona que obtenga 
+   una copia de este Software desde los canales oficiales para:
+   
+   a) USAR el Software para fines personales, educativos y de investigación 
+      en entornos no comerciales.
+   
+   b) ESTUDIAR cómo funciona el Software mediante la lectura del código 
+      fuente disponible públicamente.
+   
+   c) MODIFICAR el Software para uso personal ÚNICAMENTE en su propio 
+      entorno, sin redistribuir las modificaciones.
+   
+   d) CREAR FORKS PÚBLICOS del repositorio oficial con las siguientes 
+      condiciones:
+      - Solo para propósitos de estudio, auditoría de seguridad o 
+        propuestas de mejoras
+      - Debe mantener visible el copyright original
+      - Debe incluir enlace al repositorio oficial
+      - Está prohibido el uso comercial del fork
+      - El titular se reserva el derecho a monitorear todos los forks
+   
+   e) CONTRIBUIR mejoras al proyecto mediante Issues, Discussions o Pull 
+      Requests al repositorio oficial (las contribuciones aceptadas quedan 
+      bajo esta misma licencia).
+
+3. RESTRICCIONES Y PROHIBICIONES
+
+   Está EXPRESAMENTE PROHIBIDO:
+   
+   a) USO COMERCIAL de cualquier tipo:
+      - Venta del Software o licencias de uso
+      - Uso en entornos empresariales, corporativos o con fines de lucro
+      - Provisión de servicios comerciales basados en el Software
+      - Hosting comercial o SaaS (Software as a Service)
+      - Consultoría o soporte comercial sin autorización
+      - Cualquier actividad que genere ingresos directos o indirectos
+      - Uso comercial de forks del repositorio
+   
+   b) REDISTRIBUCIÓN del Software:
+      - Redistribuir copias del Software (original o modificado)
+      - Crear mirrors o repositorios alternativos con fines de distribución
+      - Distribuir el Software en plataformas de terceros
+      - Incluir el Software en otros paquetes o distribuciones
+      - Subir el Software a registros de paquetes (npm, pip, apt, etc.)
+      
+      EXCEPCIÓN PARA FORKS: Los forks públicos están permitidos bajo 
+      las condiciones de la sección 2.d, pero no constituyen canales 
+      de distribución autorizados. Solo el repositorio oficial en 
+      https://github.com/SalvadorPalmaRodriguez/enola-server-2025 y los 
+      releases oficiales están autorizados para distribución.
+   
+   c) OBRAS DERIVADAS COMERCIALES:
+      - Distribuir versiones modificadas comercialmente
+      - Crear productos comerciales basados en el Software
+      - Vender modificaciones o extensiones
+      - Comercializar forks con cambios
+      
+      Las modificaciones pueden realizarse en forks públicos para estudio,
+      pero no pueden comercializarse ni distribuirse como productos.
+   
+   d) COMPETENCIA COMERCIAL:
+      - Crear productos o servicios competidores comerciales
+      - Usar el código para desarrollar alternativas comerciales
+   
+   e) VIOLACIÓN DE COPYRIGHT:
+      - Remover avisos de copyright
+      - Reclamar autoría del Software original
+      - Presentar el Software como trabajo propio
+
+4. MONITOREO Y CUMPLIMIENTO
+
+   a) MONITOREO DE FORKS: El titular del copyright se reserva el derecho 
+      de monitorear públicamente todos los forks del repositorio mediante 
+      herramientas automatizadas y comunitarias.
+   
+   b) REPORTE COMUNITARIO: Se alienta a la comunidad a reportar violaciones 
+      de esta licencia mediante los canales oficiales.
+   
+   c) MEDIDAS CORRECTIVAS: Las violaciones de esta licencia pueden resultar en:
+      - Solicitudes de DMCA (Digital Millennium Copyright Act)
+      - Acciones legales por infracción de copyright
+      - Publicación de lista de infractores
+      - Terminación inmediata de todos los permisos concedidos
+
+5. DISTRIBUCIÓN Y CONTROL
+
+   a) DISTRIBUCIÓN OFICIAL: Solo el titular del copyright (Salvador Palma 
+      Rodríguez) tiene derecho a:
+      - Distribuir el Software original o modificado comercialmente
+      - Crear y publicar releases oficiales
+      - Ofrecer el Software en canales comerciales
+      - Autorizar distribuciones comerciales de terceros
+   
+   b) CÓDIGO FUENTE: El código fuente está disponible públicamente para 
+      estudio, transparencia y auditoría. Los forks están permitidos bajo 
+      las condiciones de la sección 2.d.
+   
+   c) RECONOCIMIENTO: Todo uso del Software y todo fork debe incluir 
+      atribución clara al autor original y un enlace al repositorio oficial.
+
+6. LICENCIAS COMERCIALES
+
+   Para cualquier uso comercial, empresarial, redistribución comercial o 
+   uso comercial de obras derivadas, debe obtenerse una licencia comercial 
+   específica contactando al titular del copyright.
+   
+   Contacto para licencias comerciales: salvadorpalmarodriguez@gmail.com
+
+7. AVISO DE COPYRIGHT
+
+   Todas las copias del Software, forks y modificaciones, deben incluir:
+   - Este archivo de licencia completo
+   - El aviso de copyright original
+   - Un reconocimiento visible al autor original
+   - Enlace al repositorio oficial
+
+8. GARANTÍAS Y RESPONSABILIDAD
+
+   EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, 
+   EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE 
+   COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN.
+   
+   EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES 
+   DE NINGUNA RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA 
+   ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, QUE SURJA DE O EN 
+   CONEXIÓN CON EL SOFTWARE O EL USO U OTROS TRATOS EN EL SOFTWARE.
+
+8. TERMINACIÓN
+
+   Esta licencia y los derechos concedidos bajo la misma terminarán 
+   automáticamente si se viola cualquiera de estos términos. En caso de 
+   terminación, debe cesar todo uso del Software y destruir todas las copias.
+
+9. LEY APLICABLE
+
+   Esta licencia se regirá e interpretará de acuerdo con las leyes aplicables,
+   sin tener en cuenta sus disposiciones sobre conflictos de leyes.
+
+10. CONTACTO
+
+    Para consultas sobre licencias comerciales o permisos especiales:
+    Salvador Palma Rodríguez
+    Email: salvadorpalmarodriguez@gmail.com
+    
+    Para reportar violaciones de licencia:
+    Email: salvadorpalmarodriguez@gmail.com
+    
+    Para más información sobre el proyecto:
+    https://github.com/SalvadorPalmaRodriguez/enola-server-2025
+
+============================================
+
+RESUMEN EN LENGUAJE SIMPLE (no sustituye los términos legales anteriores):
+
+✅ PUEDES:
+- Descargar e instalar Enola Server desde el repositorio oficial
+- Usar Enola Server para proyectos personales y educativos
+- Estudiar el código fuente para aprender
+- Crear forks públicos para estudio, auditoría o proponer mejoras
+- Modificar el código en tu fork para propósitos no comerciales
+- Contribuir al proyecto mediante Issues, Discussions y Pull Requests
+- Participar en el monitoreo comunitario de violaciones de licencia
+
+❌ NO PUEDES:
+- Usar Enola Server (original o fork) en empresas o con fines comerciales
+- Vender el software, licencias o servicios basados en él
+- Comercializar tu fork o modificaciones
+- Usar forks para distribución no autorizada
+- Competir comercialmente con Enola Server
+- Remover los avisos de copyright
+
+💡 TRANSPARENCIA Y FORKS:
+El código está disponible públicamente y los forks están PERMITIDOS 
+para estudio, auditoría y colaboración. Todos los forks son monitoreados 
+públicamente para proteger la licencia. Esta apertura demuestra calidad 
+y permite a la comunidad contribuir a la seguridad del proyecto.
+
+🔍 MONITOREO COMUNITARIO:
+La comunidad puede usar `scripts/monitor_forks.sh` para vigilar el 
+cumplimiento de esta licencia. Se agradece reportar violaciones.
+
+📧 ¿Necesitas uso comercial, redistribución comercial o licencia Enterprise?
+Contacta: salvadorpalmarodriguez@gmail.com
+
+🤝 PARA LA COMUNIDAD:
+Esta licencia protege el proyecto para asegurar su desarrollo sostenible
+a largo plazo. Tu uso personal, forks educativos y contribuciones están 
+completamente permitidos y valorados.
+
+🤝 PARA LA COMUNIDAD:
+Esta licencia protege el proyecto para asegurar su desarrollo sostenible
+a largo plazo. Tu uso personal está completamente permitido y valorado.
+
+============================================

@@ -1,0 +1,69 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                      AYUDA - DIAGNÓSTICO                      ║
+╚═══════════════════════════════════════════════════════════════╝
+
+🔍 HERRAMIENTAS DE DIAGNÓSTICO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPCIONES DISPONIBLES:
+
+1️⃣  Resumen rápido
+   • Estado de NGINX, Tor, SSH y WordPress en una vista
+   • Ideal para verificación rápida del sistema
+
+2️⃣  Detalles NGINX
+   • Configuración y estado del servidor web
+   • Puertos escuchando
+   • Sitios habilitados
+
+3️⃣  Detalles Tor
+   • Hidden Services activos
+   • Direcciones .onion
+   • Estado de conexión
+
+4️⃣  Detalles SSH
+   • Estado del servicio SSH
+   • Puerto configurado
+   • Conexiones activas
+
+5️⃣  Detalles WordPress
+   • Estado de contenedores (WP + DB)
+   • Puertos y recursos (CPU/RAM)
+   • Servicios systemd
+
+6️⃣  Sincronización WordPress
+   • Verificar NGINX ↔ Contenedores
+   • Detectar desincronizaciones
+   • Estado real vs systemd
+
+7️⃣  Probar configuración NGINX
+   • Ejecuta: nginx -t
+   • Detecta errores de sintaxis
+
+8️⃣  Ejecutar Smoke Test
+   • Verificación completa del sistema
+   • Tests: NGINX, Tor, servicios, puertos
+
+9️⃣-1️⃣3️⃣ Gestión del Timer y Logs
+   • Ver/activar timer de smoke test
+   • Consultar logs de instalación
+   • Revisar histórico de tests
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 CUÁNDO USAR CADA HERRAMIENTA:
+
+• Resumen rápido → Check diario
+• Detalles específicos → Troubleshooting
+• Smoke Test → Después de cambios importantes
+• Logs → Investigar errores
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 LOGS DISPONIBLES:
+
+/var/log/enola-server/postinst.log → Instalación
+/var/log/enola-server/smoke_postinst.log → Test post-instalación
+/var/log/enola-server/smoke_timer.log → Tests periódicos
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

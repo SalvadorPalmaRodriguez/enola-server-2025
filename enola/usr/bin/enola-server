@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+LICENSE_SUMMARY="/usr/share/doc/enola-server/LICENSE.txt"
+
+# Permitir consultar la licencia en cualquier momento con --license
+if [[ "$1" == "--license" ]]; then
+    less "$LICENSE_SUMMARY"
+    exit 0
+fi
+
+# Mostrar la licencia resumida al iniciar si no se pasó --license
+less "$LICENSE_SUMMARY"
+
+# Ejecutar el menú original con sudo
+sudo /opt/enola/scripts/menu/enola_menu.sh
+
+

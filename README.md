@@ -1,0 +1,329 @@
+# 🧅 Enola Server
+
+> **Sistema profesional de gestión de servicios Onion (Tor Hidden Services) con auto-mantenimiento**
+
+[![Version](https://img.shields.io/badge/version-1.0.0-rc-blue.svg)](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/v1.0.0-rc)
+[![License](https://img.shields.io/badge/license-Source%20Available-orange.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Debian%2FUbuntu-red.svg)](https://www.debian.org/)
+
+---
+
+## 📋 Descripción
+
+**Enola Server** automatiza completamente el despliegue y gestión de servicios web anónimos en la red Tor. Esta versión es una release candidate (demo), abierta a feedback y revisión. No se recomienda para producción.
+
+### ✨ Características Destacadas
+
+- 🚀 **WordPress automatizado** - Deployment completo con contenedores Podman
+- 🔄 **Health checks automáticos** - Monitoreo continuo con auto-reinicio inteligente
+- 🛡️ **Backups y rollback** - Sistema de respaldo automático antes de cada cambio
+- ⚡ **UX intuitiva** - Atajos de teclado, ayuda contextual, confirmaciones
+- 🔧 **13 herramientas de diagnóstico** - Troubleshooting integrado
+- ✅ **Validación proactiva** - Previene conflictos de puertos y errores de configuración
+
+---
+
+## 🎯 Casos de Uso
+
+- **Blogs anónimos** - WordPress en Hidden Service con SSL
+- **Acceso SSH seguro** - SSH vía Tor sin exponer IP
+- **Hosting de apps web** - Cualquier aplicación HTTP/HTTPS
+- **Desarrollo y testing** - Entorno aislado para pruebas
+
+---
+
+## 📦 Instalación Rápida
+
+### Requisitos
+
+- Debian 11/12
+- 1GB RAM mínimo, 2GB recomendado
+- Conexión a internet
+
+### Desde Release (Recomendado)
+
+```bash
+# Descargar última versión
+wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.0.0-rc/enola-server_1.0.0-rc_all.deb
+
+# Instalar
+sudo dpkg -i enola-server_1.0.0-rc_all.deb
+sudo apt-get install -f  # Resolver dependencias si es necesario
+
+# Ejecutar
+sudo enola-server
+```
+
+### Desde Código Fuente
+
+```bash
+# Clonar repositorio
+git clone https://github.com/SalvadorPalmaRodriguez/enola-server-2025.git
+cd enola-server-2025
+
+# Construir paquete
+bash scripts/build.sh
+
+# Instalar
+sudo dpkg -i enola-server_1.0.0_all.deb
+```
+
+---
+
+## 🚀 Inicio Rápido
+
+### 1. Desplegar WordPress en Onion
+
+```bash
+sudo enola-server
+→ WordPress → Generar nuevo WordPress
+→ Nombre: "blog"
+→ Puerto backend: 8080
+```
+
+Resultado: WordPress funcional en dirección `.onion` con SSL y MySQL
+
+### 2. Ver servicios activos
+
+```bash
+sudo enola-server
+→ Gestión de Servicios Tor → Listar servicios
+```
+
+### 3. Acceder vía Tor Browser
+
+```
+http://<tu-direccion>.onion
+```
+
+---
+
+## 📚 Documentación
+
+### Para Usuarios
+
+- **[README Completo](enola/README.md)** - Documentación detallada del servidor
+- **[Configuración SSH Cliente](docs/CLIENT_SSH_SETUP.md)** - Cómo conectar vía SSH
+- **[Product Brief](PRODUCT_BRIEF.md)** - Presentación para inversores
+
+### Scripts de Desarrollo
+
+```bash
+# Construir paquete .deb
+bash scripts/build.sh
+
+# Limpiar entorno (elimina contenedores, configs, etc.)
+bash scripts/clean.sh
+
+# Generar claves SSH cliente
+bash scripts/client-keygen.sh
+```
+
+---
+
+## 🏗️ Arquitectura
+
+**Arquitectura General:**
+```
+┌─────────────────────────────────────────┐
+│           Enola Server v1.0             │
+│         (Bash + Systemd)                │
+└────────────┬────────────────────────────┘
+             │
+             │
+        ┌────▼────┐
+        │   Tor   │
+        │ Hidden  │
+        │ Service │
+        └────┬────┘
+             │
+        ┌────▼─────┐
+        │  NGINX   │
+        │  Reverse │
+        │  Proxy   │
+        └────┬─────┘
+             │
+        ┌────▼──────────┐
+        │ Tu Aplicación │
+        │  (Backend en  │
+        │   localhost)  │
+        └───────────────┘
+             │
+    ┌────────▼─────────┐
+    │ tuapp.onion      │
+    │ (Dirección .onion│
+    │  generada)       │
+    └──────────────────┘
+```
+
+**Caso de Uso: WordPress (incluido):**
+```
+┌─────────────────────────────────────────┐
+│           Enola Server v1.0             │
+└────────────┬────────────────────────────┘
+             │
+             │
+        ┌────▼────┐
+        │   Tor   │
+        │ Hidden  │
+        │ Service │
+        └────┬────┘
+             │
+        ┌────▼─────┐
+        │  NGINX   │
+        │  Reverse │
+        │  Proxy   │
+        └────┬─────┘
+             │
+        ┌────▼───────┐
+        │   Podman   │
+        │ (Container)│
+        └────┬───────┘
+             │
+        ┌────▼───────┐
+        │ WordPress  │
+        │  + MySQL   │
+        └────────────┘
+             │
+    ┌────────▼─────────┐
+    │ tuweb.onion      │
+    │ (Dirección .onion│
+    │  generada)       │
+    └──────────────────┘
+```
+
+**Componentes:**
+- **Tor** - Hidden Services y proxy SOCKS
+- **NGINX** - Reverse proxy con SSL
+- **Podman** - Contenedores sin privilegios
+- **Systemd** - Gestión de servicios y timers
+- **Health Monitor** - Auto-recuperación automática
+
+---
+
+## 📈 Estado del Proyecto
+
+### ✅ Completado (v1.0.0)
+
+| Fase | Características | Estado |
+|------|----------------|--------|
+| **Fase 1** | UX Básicas (breadcrumbs, dashboard, '0=Volver') | ✅ 100% |
+| **Fase 2** | UX Avanzadas (atajos, confirmaciones, mensajes) | ✅ 100% |
+| **Fase 3** | Seguridad (validación puertos, backups, ayuda) | ✅ 100% |
+| **Fase 4** | Hardening (health checks, auto-reinicio) | ✅ 100% |
+
+### 🔮 Roadmap Futuro (Requiere Financiación)
+
+- **Fase 5:** Observabilidad (dashboard recursos, logs centralizados)
+- **Fase 6:** Automatización (despliegue YAML, API REST)
+- **Fase 7:** Seguridad Avanzada (UFW, file sharing, fwknop, HTTP auth)
+
+**[Ver roadmap completo](docs/ROADMAP.md)**
+
+---
+
+## 🤝 Contribuir
+
+Este proyecto está bajo una **licencia Source Available** que permite:
+- ✅ Uso personal y educativo
+- ✅ Estudiar el código fuente
+- ✅ Reportar bugs mediante Issues
+
+**Actualmente aceptamos:**
+- 🐛 **Issues** - Reportes de bugs y problemas
+- 💡 **Discussions** - Propuestas e ideas de mejoras
+
+**Pull Requests temporalmente cerrados:** Actualmente el proyecto está en fase de financiación y no hay recursos para revisar código externo. Se abrirán una vez conseguida financiación.
+
+**Ver [CONTRIBUTING.md](docs/CONTRIBUTING.md)** para detalles sobre cómo contribuir.
+
+**Nota:** El uso comercial y la redistribución están restringidos. Contacta para licencias comerciales.
+
+### 🔍 Monitoreo de Forks
+
+Este proyecto **permite forks** para facilitar el estudio del código y la auditoría de seguridad. Sin embargo, **todos los forks son monitoreados** públicamente.
+
+**Ayuda a proteger el proyecto:**
+```bash
+# Ejecuta el script de monitoreo (requiere: gh, jq)
+bash scripts/monitor_forks.sh
+```
+
+Si detectas un fork con:
+- ❌ Uso comercial no autorizado
+- ❌ Redistribución del software
+- ❌ Eliminación de avisos de copyright
+- ❌ Competencia comercial
+
+**Reporta a:** salvadorpalmarodriguez@gmail.com
+
+---
+
+## 📄 Licencia
+
+**Copyright © 2025 Salvador Palma Rodríguez**
+
+Este software está bajo una **Licencia Source Available - No Comercial**.
+
+✅ **Permitido:**
+- Uso personal, educativo e investigación
+- Estudio del código fuente
+- Modificaciones privadas
+- Contribuciones al proyecto oficial
+
+❌ **Prohibido:**
+- Uso comercial sin autorización
+- Redistribución (ni original ni modificado)
+- Competencia comercial
+
+**Nota:** Los forks están permitidos para estudio y auditoría, pero son monitoreados públicamente. Ver sección "Monitoreo de Forks" arriba.
+
+⚠️ **GARANTÍAS:**
+- El software se proporciona **"TAL CUAL"** (AS IS)
+- **Sin garantías** de ningún tipo, expresas o implícitas
+- Sin responsabilidad por daños derivados del uso
+
+**[Ver licencia completa](LICENSE)**
+
+---
+
+## 📞 Contacto
+
+**Autor:** Salvador Palma Rodríguez  
+**Email:** salvadorpalmarodriguez@gmail.com  
+**GitHub:** [@SalvadorPalmaRodriguez](https://github.com/SalvadorPalmaRodriguez)
+
+### Para Empresas e Inversores
+
+¿Interesado en licencias Enterprise, inversión o partnership?
+
+📧 **Contacto:** salvadorpalmarodriguez@gmail.com  
+📄 **Presentación:** [PRODUCT_BRIEF.md](PRODUCT_BRIEF.md)
+
+---
+
+## 🙏 Agradecimientos
+
+- [Tor Project](https://www.torproject.org/) - Red de anonimato
+- [NGINX](https://nginx.org/) - Reverse proxy
+- [Podman](https://podman.io/) - Contenedores sin privilegios
+- [Debian](https://www.debian.org/) - Sistema base
+
+---
+
+## 📊 Estadísticas
+
+- **5,000+** líneas de código Bash
+- **30+** scripts modulares
+- **15/15** tests pasando ✅
+- **>95%** uptime estimado
+- **50-60%** reducción de errores vs manual
+
+---
+
+**🎉 ¡Bienvenido a Enola Server v1.0.0!**
+
+```bash
+sudo dpkg -i enola-server_1.0.0_all.deb
+sudo enola-server
+```

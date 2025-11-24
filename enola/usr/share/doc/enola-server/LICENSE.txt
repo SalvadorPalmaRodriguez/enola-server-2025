@@ -1,0 +1,33 @@
+==========================================================
+[Nombre de tu Aplicación] – Licencia de Uso Resumida
+==========================================================
+
+Uso personal:
+- Esta aplicación puede usarse solo de manera personal y privada.
+- Puedes modificarla para uso personal, pero no redistribuir ni usar con fines comerciales.
+
+Uso comercial:
+- Cualquier uso con fines de lucro requiere autorización previa del Creador.
+- Esto incluye integración en productos, servicios, sistemas o stacks tecnológicos.
+
+Código fuente:
+- No disponible públicamente. El acceso solo mediante acuerdo escrito.
+
+Nombre y marca:
+- No se puede usar el nombre o marca de la aplicación sin permiso.
+
+Descargas:
+- Solo desde el sitio oficial: [enlace oficial de GitHub u otro].
+
+Responsabilidad:
+- La aplicación se ofrece "tal cual". El Creador no se hace responsable de daños derivados de su uso.
+
+Contacto para licencias comerciales o educativas:
+- Salvador Palma Rodríguez
+- [correo electrónico o formulario de contacto]
+
+Para detalles legales completos, consulta LICENSE_FULL.txt.
+==========================================================
+Al continuar, aceptas estos términos.
+==========================================================
+

@@ -1,0 +1,179 @@
+#!/usr/bin/env bash
+
+set -e
+
+SCRIPTS_DIR="/opt/enola/scripts"
+ENOLA_MENU_SCRIPT="$SCRIPTS_DIR/menu/enola_menu.sh"
+POSTINST_LOG="/var/log/enola-server/postinst.log"
+
+
+log_postinst()  { echo "[POSTINST] $(date '+%F %T') | $*" | tee -a "$POSTINST_LOG" >&2; }
+warn_postinst() { echo "[POSTINST] $(date '+%F %T') | ⚠️ $*" | tee -a "$POSTINST_LOG" >&2; }
+
+wait_onion_services() {
+    local services_dir="/etc/tor/enola.d"
+    local timeout=60
+    shopt -s nullglob
+    for conf_file in "$services_dir"/*.conf; do
+        hs_dir=$(grep -i "HiddenServiceDir" "$conf_file" | awk '{print $2}')
+        hs_file="$hs_dir/hostname"
+        local service_name=$(basename "$conf_file" .conf)
+        log_postinst "Esperando generación de hostname para $service_name..."
+
+        # Esperar archivo hostname con timeout
+        local waited=0
+        until [ -f "$hs_file" ] || [ $waited -ge $timeout ]; do
+            sleep 1
+            waited=$((waited+1))
+        done
+
+        if [ -f "$hs_file" ]; then
+            onion=$(<"$hs_file")
+            log_postinst "✅ Servicio onion activo en: $onion"
+        else
+            warn_postinst "⛔ Timeout esperando hostname de '$service_name' después de $timeout segundos."
+            warn_postinst "Verifica que enola-tor.service esté funcionando: journalctl -u enola-tor -n 50"
+        fi
+    done
+    shopt -u nullglob
+}
+
+case "$1" in
+configure)
+    # Crear directorio de logs si no existe
+    mkdir -p "$(dirname "$POSTINST_LOG")"
+    
+    # Crear directorio de estado para flags del sistema
+    mkdir -p /var/lib/enola-server
+    
+    log_postinst "Iniciando script postinst..."
+
+    # Comprobar scripts y permisos
+    [ -d "$SCRIPTS_DIR" ] || { log_postinst "No se encontró $SCRIPTS_DIR"; exit 1; }
+    chown -R root:root "$SCRIPTS_DIR"
+    find "$SCRIPTS_DIR" -type f -exec chmod 755 {} \;
+    find "$SCRIPTS_DIR" -type d -exec chmod 755 {} \;
+
+    [ -f "$ENOLA_MENU_SCRIPT" ] || { log_postinst "No se encontró $ENOLA_MENU_SCRIPT"; exit 1; }
+    chmod 755 "$ENOLA_MENU_SCRIPT"
+
+    # Enlace simbólico en /usr/bin
+    ln -sf "$ENOLA_MENU_SCRIPT" /usr/bin/enola-server
+    chmod 755 /usr/bin/enola-server
+    log_postinst "Enlace simbólico creado: /usr/bin/enola-server -> $ENOLA_MENU_SCRIPT"
+
+    # Limpiar configuraciones NGINX huérfanas (sin servicio Tor correspondiente)
+    log_postinst "Limpiando configuraciones NGINX huérfanas..."
+    for nginx_conf in /etc/nginx/sites-available/*.conf; do
+        [ -f "$nginx_conf" ] || continue
+        service_name=$(basename "$nginx_conf" .conf)
+        [ "$service_name" = "default" ] && continue
+        
+        # Si no existe el servicio Tor correspondiente, eliminar NGINX config
+        if [ ! -f "/etc/tor/enola.d/${service_name}.conf" ]; then
+            log_postinst "Eliminando configuración huérfana: $service_name"
+            rm -f "$nginx_conf"
+            rm -f "/etc/nginx/sites-enabled/${service_name}.conf"
+        fi
+    done
+
+    # Deshabilitar y detener el servicio tor del sistema para evitar conflictos
+    if systemctl is-active --quiet tor.service; then
+        log_postinst "Deteniendo tor.service del sistema para evitar conflictos de puerto..."
+        systemctl stop tor.service || warn_postinst "No se pudo detener tor.service"
+    fi
+    if systemctl is-enabled --quiet tor.service 2>/dev/null; then
+        log_postinst "Deshabilitando tor.service del sistema..."
+        systemctl disable tor.service || warn_postinst "No se pudo deshabilitar tor.service"
+    fi
+    # También detener tor@default si existe
+    if systemctl is-active --quiet tor@default.service 2>/dev/null; then
+        systemctl stop tor@default.service || warn_postinst "No se pudo detener tor@default.service"
+        systemctl disable tor@default.service 2>/dev/null || true
+    fi
+
+    # Desplegar Tor primero (crea hidden_service_* y .conf con puertos libres)
+    "$SCRIPTS_DIR/tor/deploy_tor.sh" || warn_postinst "Fallo parcial en Tor, continuar"
+
+    # NGINX ya NO se despliega en la instalación
+    # Se configurará automáticamente cuando el usuario cree un servicio web mediante:
+    # - deploy_tor_web.sh (servicio web personalizado)
+    # - generate_wordpress.sh (WordPress)
+
+    # Ajustar permisos para que Tor pueda leerlos
+    # IMPORTANTE: Hacerlo ANTES de reiniciar el servicio
+    if [ -d /etc/tor/enola.d ]; then
+        chown -R debian-tor:debian-tor /etc/tor/enola.d
+        chmod 755 /etc/tor/enola.d
+        shopt -s nullglob
+        for f in /etc/tor/enola.d/*.conf; do
+            chown root:debian-tor "$f"
+            chmod 640 "$f"
+        done
+        shopt -u nullglob
+        log_postinst "Permisos de /etc/tor/enola.d ajustados correctamente"
+    fi
+
+    # Recargar unidades systemd y Reiniciar/Habilitar enola-tor.service
+    systemctl daemon-reload || true
+    systemctl restart enola-tor.service || warn_postinst "No se pudo reiniciar enola-tor.service"
+    systemctl enable enola-tor.service || warn_postinst "No se pudo habilitar enola-tor.service al inicio"
+
+    # Esperar generación de hostnames de servicios Onion
+    wait_onion_services
+
+    # Instalar y habilitar Health Monitor
+    log_postinst "Instalando Health Monitor..."
+    
+    # Copiar servicios systemd
+    cp /usr/share/enola-server/templates/enola-health.service.template /etc/systemd/system/enola-health.service
+    cp /usr/share/enola-server/templates/enola-health.timer.template /etc/systemd/system/enola-health.timer
+    
+    # Crear directorio de estado para health checks
+    mkdir -p /var/lib/enola-server/health
+    
+    # Recargar systemd y habilitar timer
+    systemctl daemon-reload || true
+    systemctl enable enola-health.timer || warn_postinst "No se pudo habilitar enola-health.timer"
+    systemctl start enola-health.timer || warn_postinst "No se pudo iniciar enola-health.timer"
+    
+    log_postinst "✅ Health Monitor habilitado (ejecuta cada 5 minutos)"
+
+    log_postinst "🎉 Instalación de Enola completada exitosamente."
+
+    # El smoke test timer NO se habilita automáticamente
+    # El usuario puede habilitarlo desde el menú: enola-server → Configuración
+    # Esto evita advertencias innecesarias en la instalación
+
+    # Ejecutar smoke test no destructivo y volcar resultado a log (sin fallar instalación)
+    SMOKE_SCRIPT="/opt/enola/scripts/common/smoke_test.sh"
+    SMOKE_LOG="/var/log/enola-server/smoke_postinst.log"
+    if [ -x "$SMOKE_SCRIPT" ]; then
+        log_postinst "Ejecutando smoke test post-instalación (resultado en $SMOKE_LOG)..."
+        # límite de tiempo para evitar bloqueos
+        if command -v timeout >/dev/null 2>&1; then
+            timeout 60 bash "$SMOKE_SCRIPT" | tee "$SMOKE_LOG" || true
+        else
+            bash "$SMOKE_SCRIPT" | tee "$SMOKE_LOG" || true
+        fi
+    else
+        warn_postinst "Smoke test no encontrado en $SMOKE_SCRIPT (omitido)"
+    fi
+    ;;
+
+abort-upgrade|abort-remove|abort-deconfigure)
+    log_postinst "Abortando configuración del paquete."
+    ;;
+
+*)
+    echo "Usage: $0 {configure|abort-upgrade|abort-remove|abort-deconfigure}" >&2
+    exit 1
+    ;;
+esac
+
+
+# Habilitar timer global de podman para restart=always
+systemctl enable --now podman-auto-update.timer || true
+systemctl enable --now podman.socket || true
+
+exit 0

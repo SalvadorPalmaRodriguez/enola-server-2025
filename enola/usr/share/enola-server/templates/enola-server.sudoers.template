@@ -1,0 +1,7 @@
+enola-user ALL=NOPASSWD: /usr/bin/systemctl restart tor
+enola-user ALL=NOPASSWD: /usr/bin/systemctl stop tor
+enola-user ALL=NOPASSWD: /usr/bin/systemctl start tor
+enola-user ALL=NOPASSWD: /usr/bin/chown -R debian-tor:debian-tor /var/lib/tor/hidden_service_web
+enola-user ALL=NOPASSWD: /usr/bin/chown -R debian-tor:debian-tor /var/lib/tor/hidden_service_ssh
+enola-user ALL=NOPASSWD: /usr/bin/mkdir -p /var/lib/tor/hidden_service_web
+enola-user ALL=NOPASSWD: /usr/bin/mkdir -p /var/lib/tor/hidden_service_ssh

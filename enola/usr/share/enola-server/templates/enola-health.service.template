@@ -1,0 +1,21 @@
+[Unit]
+Description=Enola Server Health Monitor
+Documentation=man:enola-server(1)
+After=network.target enola-tor.service nginx.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/enola/scripts/common/health_monitor.sh
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=enola-health
+
+# Ejecutar como usuario root para poder reiniciar servicios
+User=root
+
+# Seguridad
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

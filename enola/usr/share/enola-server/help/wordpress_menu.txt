@@ -1,0 +1,52 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                 AYUDA - GESTIÓN DE WORDPRESS                  ║
+╚═══════════════════════════════════════════════════════════════╝
+
+🌐 GESTIÓN DE WORDPRESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPCIONES DISPONIBLES:
+
+1️⃣  Iniciar/Parar WordPress
+   • Inicia o detiene contenedores de WordPress + Base de Datos
+   • Servicios administrados por systemd
+   • Puedes iniciar, parar o reiniciar
+
+2️⃣  Generar nueva instalación
+   • Crea una nueva instancia de WordPress
+   • Configura automáticamente: contenedores, NGINX, Tor
+   • Genera dirección .onion única
+
+3️⃣  Diagnósticos WordPress
+   • Estado detallado de cada servicio
+   • Sincronización entre NGINX y contenedores
+   • CPU/RAM/Puertos en uso
+
+4️⃣  Habilitar/Deshabilitar WordPress
+   • Oculta/muestra servicio en Tor
+   • No elimina datos, solo oculta el servicio Onion
+   • Útil para mantenimiento temporal
+
+5️⃣  Editar configuración
+   • Cambiar puertos (WordPress, DB, NGINX)
+   • Configurar certificados SSL
+   • Modificar variables de entorno
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  ADVERTENCIAS:
+
+• Cambiar puertos requiere reiniciar contenedores
+• Deshabilitar ≠ Eliminar (los datos permanecen)
+• Los contenedores usan Podman (no Docker)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 ARCHIVOS IMPORTANTES:
+
+Configuración: /opt/enola/wordpress/<servicio>/wordpress.env
+NGINX: /etc/nginx/sites-available/<servicio>.conf
+Tor: /etc/tor/enola.d/<servicio>.conf
+Datos: Volúmenes Podman (ver con: podman volume ls)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

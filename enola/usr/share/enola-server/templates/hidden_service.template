@@ -1,0 +1,4 @@
+HiddenServiceDir {HS_DIR}
+HiddenServiceVersion 3
+HiddenServicePort {ONION_PORT} 127.0.0.1:{BACKEND_PORT}
+

@@ -1,0 +1,17 @@
+[Unit]
+Description=Enola Server Health Monitor Timer
+Documentation=man:enola-server(1)
+Requires=enola-health.service
+
+[Timer]
+# Ejecutar 2 minutos después del boot
+OnBootSec=2min
+
+# Ejecutar cada 5 minutos
+OnUnitActiveSec=5min
+
+# Si se perdió una ejecución, ejecutarla inmediatamente
+Persistent=true
+
+[Install]
+WantedBy=timers.target

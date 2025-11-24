@@ -1,0 +1,4 @@
+HiddenServiceDir {HS_DIR}
+HiddenServiceVersion 3
+HiddenServicePort 80 127.0.0.1:{NGINX_HTTP_PORT}
+HiddenServicePort 443 127.0.0.1:{NGINX_HTTPS_PORT}

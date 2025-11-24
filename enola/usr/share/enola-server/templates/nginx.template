@@ -1,0 +1,39 @@
+server {
+    # Escucha en la interfaz de loopback (localhost) en el puerto 80.
+    # Si quieres que NGINX sea accesible desde fuera, cambia 127.0.0.1 por 0.0.0.0 o simplemente 'listen 80;'.
+     
+    listen 127.0.0.1:${NGINX_EXTERNAL};
+    listen [::1]:${NGINX_EXTERNAL};
+
+    server_name localhost; # Puedes cambiar esto por tu dominio si lo tienes
+
+    # Rutas para los archivos de log de NGINX
+    access_log ${LOG_DIR}/nginx-access.log;
+    error_log ${LOG_DIR}/nginx-error.log;
+
+ location / {
+    proxy_pass http://127.0.0.1:${BACKEND_PORT};
+
+    # Reenvío de cabeceras importantes
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host $host;
+
+    # WebSockets
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+
+    proxy_read_timeout 3600s;
+    proxy_send_timeout 3600s;
+}
+
+
+    # Cabeceras de seguridad HTTP
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+    add_header X-Frame-Options SAMEORIGIN;
+    add_header X-Content-Type-Options nosniff;
+    add_header Referrer-Policy no-referrer-when-downgrade;
+}

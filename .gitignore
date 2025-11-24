@@ -1,0 +1,34 @@
+# Paquetes Debian compilados
+*.deb
+
+# Carpetas de build antiguas
+buildandclean/
+build/
+dist/
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Node
+node_modules/

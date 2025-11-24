@@ -1,0 +1,7 @@
+HiddenServiceDir /var/lib/tor/hidden_service
+HiddenServiceVersion 3
+HiddenServicePort {WEB_PORT_HIDDEN_SERVICE} 127.0.0.1:{WEB_PORT_HIDDEN_SERVICE}
+
+HiddenServiceDir /var/lib/tor/ssh_service
+HiddenServiceVersion 3
+HiddenServicePort {SSH_PORT_HIDDEN_SERVICE} 127.0.0.1:{SSH_PORT_HIDDEN_SERVICE}

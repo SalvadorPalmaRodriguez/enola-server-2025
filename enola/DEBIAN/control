@@ -1,0 +1,33 @@
+Package: enola-server
+Version: 1.0.0
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: Salvador Palma Rodríguez <salvadorpalmarodriguez@gmail.com>
+Description: Sistema de gestión de servicios Onion con WordPress, auto-mantenimiento y seguridad avanzada
+ Enola Server v1.0.0 - Sistema completo de gestión de servicios Tor Onion
+ .
+ Características principales:
+ • Gestión automatizada de servicios Onion (Hidden Services)
+ • Despliegue de WordPress con un comando (Podman + MySQL)
+ • Configuración automática de NGINX con SSL autofirmado
+ • Health checks cada 5 minutos con auto-reinicio inteligente
+ • Sistema de backups automáticos con rollback
+ • Validación de puertos para prevenir conflictos
+ • Sistema de ayuda contextual ('h' en menús)
+ • UX mejorada con atajos de teclado y confirmaciones
+ • Monitoreo de recursos y estado de servicios
+ .
+ Ideal para:
+ • Servicios web anónimos vía Tor
+ • Blogs y sitios WordPress en la red Onion
+ • Acceso SSH mediante Hidden Service
+ • Hosting de aplicaciones web personalizadas
+ .
+ Licencia: Uso No Comercial - Copyright © 2025 Salvador Palma Rodríguez
+ Prohibido uso comercial sin autorización. Ver LICENSE para detalles.
+Depends: tor, nginx, openssh-server, certbot, python3-certbot-nginx, dialog, figlet, openssh-server, podman, curl, apache2-utils
+Recommends: ufw, fwknop-client, fzf, xclip, toilet
+Suggests: fail2ban
+Files: /usr/share/enola-server/templates/enola-server.sudoers.template
+

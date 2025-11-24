@@ -1,0 +1,60 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                AYUDA - SERVICIOS TOR (ONION)                  ║
+╚═══════════════════════════════════════════════════════════════╝
+
+🧅 SERVICIOS ONION (TOR)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPCIONES DISPONIBLES:
+
+1️⃣  Listar servicios Onion
+   • Muestra todos los servicios activos con sus direcciones .onion
+   • Indica estado del backend (NGINX, SSH, etc.)
+   • Muestra puertos y redirecciones
+
+2️⃣  Añadir servicio web genérico
+   • Crea un nuevo Hidden Service en Tor
+   • Configura proxy inverso en NGINX
+   • Genera dirección .onion automáticamente
+
+3️⃣  Eliminar servicio
+   • Elimina configuración de Tor y NGINX
+   • ⚠️  CUIDADO: Esta acción NO se puede deshacer
+   • Los datos de WordPress se mantienen (si aplica)
+
+4️⃣  Habilitar/Deshabilitar servicio
+   • Oculta temporalmente un servicio
+   • No elimina configuración
+   • Útil para mantenimiento
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔒 SEGURIDAD:
+
+• Las direcciones .onion son generadas automáticamente por Tor
+• Los servicios solo son accesibles a través de Tor Browser
+• Usa HTTPS cuando sea posible (certificados SSL)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📌 CONCEPTOS CLAVE:
+
+Hidden Service (Servicio Oculto):
+  Servicio accesible solo mediante Tor, con dirección .onion
+
+Backend:
+  Servicio local (NGINX, SSH) que responde las peticiones
+
+Redirección:
+  Puerto Onion → Puerto local
+  Ejemplo: 80 → 127.0.0.1:9000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 ARCHIVOS:
+
+Configuración Tor: /etc/tor/enola.d/<servicio>.conf
+Claves privadas: /var/lib/tor/<servicio>/
+NGINX: /etc/nginx/sites-available/<servicio>.conf
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
