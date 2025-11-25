@@ -467,7 +467,7 @@ Si estás interesado en:
 
 **Versión 1.0.0:**
 - ✅ Uso personal y educativo: **Disponible**
-- ✅ Forks para estudio/auditoría: **PERMITIDOS** (monitoreados)
+- ✅ Forks para estudio/auditoría: **PERMITIDOS** 
 - ✅ Modificaciones en forks para uso no comercial: **PERMITIDAS**
 - ❌ Uso comercial sin autorización: **PROHIBIDO**
 - ❌ Redistribución comercial: **PROHIBIDA**
