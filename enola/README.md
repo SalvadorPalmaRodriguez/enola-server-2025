@@ -484,7 +484,7 @@ Por favor contacta: salvadorpalmarodriguez@gmail.com
 
 **GitHub Issues:** [enola-server-2025/issues](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/issues)  
 **Email:** salvadorpalmarodriguez@gmail.com  
-**Documentación completa:** Ver archivos `PRODUCT_BRIEF.md` y `docs/ROADMAP.md`
+**Documentación completa:** Consulta `PRODUCT_BRIEF.md` para información ampliada. El roadmap se encuentra resumido en este documento.
 
 ---
 

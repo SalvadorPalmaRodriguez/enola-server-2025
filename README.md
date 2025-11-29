@@ -241,7 +241,7 @@ bash scripts/client-keygen.sh
 - **Fase 6:** Automatización (despliegue YAML, API REST)
 - **Fase 7:** Seguridad Avanzada (UFW, file sharing, fwknop, HTTP auth)
 
-**[Ver roadmap completo](docs/ROADMAP.md)**
+El roadmap completo se encuentra resumido en este documento. Para más detalles, consulta futuras actualizaciones.
 
 ---
 
@@ -258,7 +258,7 @@ Este proyecto está bajo una **licencia Source Available** que permite:
 
 **Pull Requests temporalmente cerrados:** Actualmente el proyecto está en fase de financiación y no hay recursos para revisar código externo. Se abrirán una vez conseguida financiación.
 
-**Ver [CONTRIBUTING.md](docs/CONTRIBUTING.md)** para detalles sobre cómo contribuir.
+Para detalles sobre cómo contribuir, consulta la sección de contribución en este documento o contacta al autor.
 
 **Nota:** El uso comercial y la redistribución están restringidos. Contacta para licencias comerciales.
 
