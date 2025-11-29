@@ -1,9 +1,19 @@
+# ⚠️ Licencia de Uso No Comercial
+
+**Este software está protegido por una licencia de uso NO COMERCIAL.**
+
+Queda prohibido el uso en entornos empresariales, comerciales, SaaS, venta, o cualquier actividad con fines de lucro, salvo autorización expresa del titular.
+
+*El titular (Salvador Palma Rodríguez) se reserva el derecho de comercializar, licenciar o autorizar el uso comercial del software.*
+
+Consulta el archivo LICENSE para detalles completos.
+
 # 🧅 Enola Server
 
 > **Sistema profesional de gestión de servicios Onion (Tor Hidden Services) con auto-mantenimiento**
 
 [![Version](https://img.shields.io/badge/version-1.0.0-rc-blue.svg)](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/v1.0.0-rc)
-[![License](https://img.shields.io/badge/license-Source%20Available-orange.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-Non--Commercial-orange.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Debian%2FUbuntu-red.svg)](https://www.debian.org/)
 
 ---
@@ -29,6 +39,19 @@
 - **Acceso SSH seguro** - SSH vía Tor sin exponer IP
 - **Hosting de apps web** - Cualquier aplicación HTTP/HTTPS
 - **Desarrollo y testing** - Entorno aislado para pruebas
+
+---
+
+### 🌐 Casos de Uso Reales
+
+**1. Desarrollo web sin gastos ni complicaciones**  
+Cuando desarrollas una app web, normalmente solo puedes probar en local. Si quieres mostrar una demo a otros, debes contratar hosting, comprar dominio, configurar DNS y tener conocimientos avanzados de redes. Enola Server 2025 elimina todo eso: despliegue automático, seguro y privado en la red Tor, sin gastos ni exposición pública. Ideal para pruebas, demos y validación antes de invertir en infraestructura.
+
+**2. Demos privadas para clientes en consultoras**  
+En empresas de desarrollo y consultoras, mostrar avances a clientes suele requerir publicar la web antes de tiempo, comprar dominios y exponer la idea a la competencia. Con Enola Server 2025, puedes compartir el acceso solo con quien tú quieras, sin revelar el proyecto ni incurrir en gastos innecesarios. Así proteges la confidencialidad y la estrategia comercial.
+
+**3. Publicación segura de denuncias y testimonios**  
+Personas que quieren denunciar corrupción, negligencias médicas, estafas, acoso o violencia, y temen por su seguridad, pueden publicar información de forma anónima y segura usando Enola Server 2025, sin dejar rastro ni exponerse a represalias. La red Tor y el sistema de Enola garantizan privacidad y protección.
 
 ---
 
@@ -291,14 +314,17 @@ Este software está bajo una **Licencia Source Available - No Comercial**.
 
 **Autor:** Salvador Palma Rodríguez  
 **Email:** salvadorpalmarodriguez@gmail.com  
-**GitHub:** [@SalvadorPalmaRodriguez](https://github.com/SalvadorPalmaRodriguez)
+**GitHub:** [@SalvadorPalmaRodriguez](https://github.com/SalvadorPalmaRodriguez)  
+**LinkedIn:** [Salvador Palma Rodríguez](https://es.linkedin.com/in/salvadorpalmarodriguez)
 
 ### Para Empresas e Inversores
 
-¿Interesado en licencias Enterprise, inversión o partnership?
+¿Interesado en licencias comerciales, inversión, partnership o colaboración?
 
-📧 **Contacto:** salvadorpalmarodriguez@gmail.com  
-📄 **Presentación:** [PRODUCT_BRIEF.md](PRODUCT_BRIEF.md)
+Estoy abierto a propuestas de inversión, partnership, licencias comerciales anticipadas y colaboraciones en desarrollo. Todas las condiciones y beneficios se negociarán caso por caso, según el interés y la aportación de cada parte.
+
+Por favor contacta: salvadorpalmarodriguez@gmail.com  
+🔗 LinkedIn: [Salvador Palma Rodríguez](https://es.linkedin.com/in/salvadorpalmarodriguez)
 
 ---
 

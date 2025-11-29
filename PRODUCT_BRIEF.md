@@ -1,3 +1,13 @@
+# ⚠️ Licencia de Uso No Comercial
+
+**Este software está protegido por una licencia de uso NO COMERCIAL.**
+
+Queda prohibido el uso en entornos empresariales, comerciales, SaaS, venta, o cualquier actividad con fines de lucro, salvo autorización expresa del titular.
+
+*El titular (Salvador Palma Rodríguez) se reserva el derecho de comercializar, licenciar o autorizar el uso comercial del software.*
+
+Consulta el archivo LICENSE para detalles completos.
+
 # 🚀 ENOLA SERVER v1.0.0-rc
 ## Sistema Profesional de Gestión de Servicios Onion
 
@@ -257,6 +267,43 @@
 - ✅ **ISP no puede bloquear** - Tor usa sus propios puertos
 - ✅ **Configuración automática** - Wizards guiados paso a paso
 
+## 🌐 Casos de Uso Reales
+
+**1. Desarrollo web sin gastos ni complicaciones**
+Cuando desarrollas una app web, normalmente solo puedes probar en local. Si quieres mostrar una demo a otros, debes contratar hosting, comprar dominio, configurar DNS y tener conocimientos avanzados de redes. Enola Server 2025 elimina todo eso: despliegue automático, seguro y privado en la red Tor, sin gastos ni exposición pública. Ideal para pruebas, demos y validación antes de invertir en infraestructura.
+
+**2. Demos privadas para clientes en consultoras**
+En empresas de desarrollo y consultoras, mostrar avances a clientes suele requerir publicar la web antes de tiempo, comprar dominios y exponer la idea a la competencia. Con Enola Server 2025, puedes compartir el acceso solo con quien tú quieras, sin revelar el proyecto ni incurrir en gastos innecesarios. Así proteges la confidencialidad y la estrategia comercial.
+
+**3. Publicación segura de denuncias y testimonios**
+Personas que quieren denunciar corrupción, negligencias médicas, estafas, acoso, violencia, o cualquier tipo de delito grave pueden publicar información de forma anónima y segura usando Enola Server 2025, sin dejar rastro ni exponerse a represalias. La red Tor y el sistema de Enola garantizan privacidad y protección.
+
+Casos de uso incluyen:
+- Maltrato animal
+- Violencia de género
+- Delitos ecológicos
+- Delitos de lesa humanidad
+- Terrorismo
+- Trata de personas (trata de blancas)
+- Narcotráfico
+- Cualquier otro delito grave
+
+Enola Server 2025 permite que cualquier persona que quiera combatir a los malos y perseguir estos delitos pueda hacerlo sin correr riesgos, protegiendo su identidad y seguridad.
+
+⚠️ **Advertencia Importante sobre Anonimato y Seguridad**
+
+Aunque Enola Server 2025 está diseñado para maximizar la privacidad y el anonimato, **ningún sistema puede garantizar el anonimato absoluto**. Existen factores externos que pueden comprometer la seguridad, como:
+- Información personal revelada inconscientemente
+- Fallas de seguridad desconocidas en el sistema operativo o en la propia aplicación
+- Virus, malware o troyanos en los equipos
+- Errores humanos o técnicos
+- Vulnerabilidades de red o software
+
+La intención de Enola Server 2025 es ayudar y proteger a los usuarios, pero **siempre existe un riesgo** inherente al uso de cualquier tecnología para casos sensibles. El creador no puede garantizar la protección total ni asumir responsabilidad por posibles consecuencias derivadas del uso de la aplicación.
+
+**Recomendación ética y legal:**
+Para casos de delitos graves, lo más importante y obligatorio es **denunciar a las autoridades competentes, órganos gubernamentales, fuerzas y cuerpos de seguridad, y cualquier otro medio legal**. En países donde no se protegen los derechos humanos, se recomienda buscar apoyo en organizaciones internacionales y ONGs especializadas.
+
 ---
 
 ## 🚀 ROADMAP FUTURO
@@ -434,19 +481,9 @@ El modelo de negocio contempla múltiples fuentes de ingresos:
 ### Propuesta para Inversores
 
 **Busco:** Financiación seed para desarrollo completo  
-**Para:** Completar Fases 5, 6 y 7 (observabilidad, automatización, seguridad avanzada)  
-**Ofrezco:**
-- Equity negociable según inversión y términos
-- Participación en decisiones estratégicas
-- Acceso a métricas y roadmap en tiempo real
-- Licencia Enterprise gratuita de por vida
+**Para:** Completar Fases 5, 6 y 7 (observabilidad, automatización, seguridad avanzada)
 
-**Timeline:**
-- **Fase 1:** Desarrollo Fases 5, 6 y 7 + testing completo
-- **Fase 2:** Marketing, documentación, demo público
-- **Fase 3:** Lanzamiento versión Enterprise
-- **Fase 4:** Primeros clientes, refinamiento del producto
-- **Fase 5:** Escalado y crecimiento sostenible
+**Estoy abierto a propuestas de inversión, partnership, licencias comerciales anticipadas y colaboraciones en desarrollo. Todas las condiciones y beneficios se negociarán caso por caso, según el interés y la aportación de cada parte.**
 
 ### Siguiente Paso
 
@@ -456,7 +493,8 @@ Si estás interesado en:
 - ✅ Licencia comercial anticipada
 - ✅ Colaborar en desarrollo
 
-**Por favor contacta:** salvadorpalmarodriguez@gmail.com
+**Por favor contacta:** salvadorpalmarodriguez@gmail.com  
+🔗 LinkedIn: [Salvador Palma Rodríguez](https://es.linkedin.com/in/salvadorpalmarodriguez)
 
 ---
 

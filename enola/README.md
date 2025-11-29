@@ -1,3 +1,13 @@
+# ⚠️ Licencia de Uso No Comercial
+
+**Este software está protegido por una licencia de uso NO COMERCIAL.**
+
+Queda prohibido el uso en entornos empresariales, comerciales, SaaS, venta, o cualquier actividad con fines de lucro, salvo autorización expresa del titular.
+
+*El titular (Salvador Palma Rodríguez) se reserva el derecho de comercializar, licenciar o autorizar el uso comercial del software.*
+
+Consulta el archivo LICENSE para detalles completos.
+
 # 🧅 Enola Server v1.0.0-rc
 
 > **Sistema completo de gestión de servicios Onion con auto-mantenimiento**
@@ -292,6 +302,17 @@ sudo enola-server → Gestión de Servicios Tor → Añadir servicio
 sudo enola-server → NGINX → Desplegar configuración NGINX
 ```
 
+### 🌐 Casos de Uso Reales
+
+**Desarrollo web sin gastos ni complicaciones**  
+Cuando desarrollas una app web, normalmente solo puedes probar en local. Si quieres mostrar una demo a otros, debes contratar hosting, comprar dominio, configurar DNS y tener conocimientos avanzados de redes. Enola Server 2025 elimina todo eso: despliegue automático, seguro y privado en la red Tor, sin gastos ni exposición pública. Ideal para pruebas, demos y validación antes de invertir en infraestructura.
+
+**Demos privadas para clientes en consultoras**  
+En empresas de desarrollo y consultoras, mostrar avances a clientes suele requerir publicar la web antes de tiempo, comprar dominios y exponer la idea a la competencia. Con Enola Server 2025, puedes compartir el acceso solo con quien tú quieras, sin revelar el proyecto ni incurrir en gastos innecesarios. Así proteges la confidencialidad y la estrategia comercial.
+
+**Publicación segura de denuncias y testimonios**  
+Personas que quieren denunciar corrupción, negligencias médicas, estafas, acoso o violencia, y temen por su seguridad, pueden publicar información de forma anónima y segura usando Enola Server 2025, sin dejar rastro ni exponerse a represalias. La red Tor y el sistema de Enola garantizan privacidad y protección.
+
 ---
 
 ## 🛠️ Troubleshooting
@@ -450,13 +471,12 @@ Este proyecto está en **búsqueda de financiación** para completar las Fases 5
 
 **Pull Requests:** Temporalmente cerrados (se abrirán post-financiación)
 
-**Interesado en:**
-- 💰 Invertir en el proyecto
-- 🤝 Proponer partnership
-- 📝 Licencia Enterprise
-- 💻 Colaborar en desarrollo
+¿Interesado en licencias comerciales, inversión, partnership o colaboración?
 
-**Contactar:** salvadorpalmarodriguez@gmail.com
+Estoy abierto a propuestas de inversión, partnership, licencias comerciales anticipadas y colaboraciones en desarrollo. Todas las condiciones y beneficios se negociarán caso por caso, según el interés y la aportación de cada parte.
+
+Por favor contacta: salvadorpalmarodriguez@gmail.com  
+🔗 LinkedIn: [Salvador Palma Rodríguez](https://es.linkedin.com/in/salvadorpalmarodriguez)
 
 ---
 
