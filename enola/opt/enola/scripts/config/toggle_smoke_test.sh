@@ -24,10 +24,10 @@ SERVICE_NAME="enola-smoke.service"
 
 # Verificar si las unidades de systemd existen
 check_units() {
-    if ! systemctl list-unit-files | grep -q "^${TIMER_NAME}"; then
+    if ! systemctl list-unit-files 2>/dev/null | grep -qw "${TIMER_NAME}"; then
         die "❌ No se encontró ${TIMER_NAME} en systemd"
     fi
-    if ! systemctl list-unit-files | grep -q "^${SERVICE_NAME}"; then
+    if ! systemctl list-unit-files 2>/dev/null | grep -qw "${SERVICE_NAME}"; then
         die "❌ No se encontró ${SERVICE_NAME} en systemd"
     fi
 }

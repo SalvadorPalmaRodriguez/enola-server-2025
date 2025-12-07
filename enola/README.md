@@ -64,34 +64,43 @@ Consulta el archivo LICENSE para detalles completos.
 
 ### Requisitos Previos
 
-**Sistema operativo:** Debian 11/12 (o derivados)
+**Sistema operativo:** Debian 11/12 (o derivados como Ubuntu)
 
-**Dependencias automáticas:**
-```bash
-# Se instalan automáticamente con el paquete
-tor nginx openssh-server podman curl dialog figlet
-certbot python3-certbot-nginx apache2-utils
-```
+**Dependencias:** Se instalan automáticamente con el paquete:
+- tor, nginx, openssh-server, podman, curl, dialog, figlet
+- certbot, python3-certbot-nginx, apache2-utils
 
 **Opcionales (recomendadas):**
 ```bash
 sudo apt install ufw fwknop-client fzf xclip toilet
 ```
 
-### Instalación desde .deb
+### Método 1: Instalación Manual (Recomendado)
 
 ```bash
-# 1. Descargar el paquete (ejemplo GitHub Releases)
+# Descargar el paquete
 wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.0.0-rc/enola-server_1.0.0-rc_all.deb
 
-# 2. Instalar
-sudo dpkg -i enola-server_1.0.0-rc_all.deb
+# Instalar con apt (resuelve dependencias automáticamente)
+sudo apt update
+sudo apt install -y ./enola-server_1.0.0-rc_all.deb
 
-# 3. Resolver dependencias si es necesario
-sudo apt-get install -f
-
-# 4. Verificar instalación (smoke test ejecutado automáticamente)
+# Verificar instalación
 sudo enola-server --smoke
+```
+
+### Método 2: Script Instalador (Para Usuarios Novatos)
+
+El script `install_and_deps.sh` automatiza todo el proceso:
+
+```bash
+# Descargar paquete y script
+wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.0.0-rc/enola-server_1.0.0-rc_all.deb
+wget https://raw.githubusercontent.com/SalvadorPalmaRodriguez/enola-server-2025/main/scripts/install_and_deps.sh
+
+# Ejecutar instalador
+chmod +x install_and_deps.sh
+sudo ./install_and_deps.sh ./enola-server_1.0.0-rc_all.deb
 ```
 
 ### Verificación Post-Instalación

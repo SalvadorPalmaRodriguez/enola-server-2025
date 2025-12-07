@@ -285,4 +285,5 @@ sudo journalctl -u sshd -f
 ---
 
 **Copyright © 2025 Salvador Palma Rodríguez**  
-**Licencia:** Source Available - No Comercial
+**Licencia:** Source Available - No Comercial  
+Ver archivo [LICENSE](../LICENSE) para detalles completos.

@@ -26,7 +26,7 @@ Description: Sistema de gestión de servicios Onion con WordPress, auto-mantenim
  .
  Licencia: Uso No Comercial - Copyright © 2025 Salvador Palma Rodríguez
  Prohibido uso comercial sin autorización. Ver LICENSE para detalles.
-Depends: tor, nginx, openssh-server, certbot, python3-certbot-nginx, dialog, figlet, openssh-server, podman, curl, apache2-utils
+Depends: tor, nginx, openssh-server, certbot, python3-certbot-nginx, dialog, figlet, podman, curl, apache2-utils
 Recommends: ufw, fwknop-client, fzf, xclip, toilet
 Suggests: fail2ban
 Files: /usr/share/enola-server/templates/enola-server.sudoers.template

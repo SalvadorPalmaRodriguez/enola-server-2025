@@ -1,33 +1,44 @@
-==========================================================
-[Nombre de tu Aplicación] – Licencia de Uso Resumida
-==========================================================
+===========================================================
+ENOLA SERVER - Licencia de Uso Resumida
+===========================================================
+
+Copyright (c) 2025 Salvador Palma Rodríguez
+Todos los derechos reservados.
 
 Uso personal:
-- Esta aplicación puede usarse solo de manera personal y privada.
-- Puedes modificarla para uso personal, pero no redistribuir ni usar con fines comerciales.
+  ✅ Esta aplicación puede usarse de manera personal y privada.
+  ✅ Puedes modificarla para uso personal.
+  ✅ Puedes estudiar el código fuente (disponible públicamente).
 
 Uso comercial:
-- Cualquier uso con fines de lucro requiere autorización previa del Creador.
-- Esto incluye integración en productos, servicios, sistemas o stacks tecnológicos.
+  ❌ Cualquier uso con fines de lucro requiere autorización previa.
+  ❌ Esto incluye integración en productos, servicios, sistemas o SaaS.
+  ❌ Uso en entornos empresariales está prohibido sin licencia.
 
 Código fuente:
-- No disponible públicamente. El acceso solo mediante acuerdo escrito.
+  💡 Disponible públicamente en GitHub para transparencia y auditoría.
+  💡 Los forks están permitidos para estudio y contribución.
 
 Nombre y marca:
-- No se puede usar el nombre o marca de la aplicación sin permiso.
+  ❌ No se puede usar el nombre o marca sin permiso.
 
-Descargas:
-- Solo desde el sitio oficial: [enlace oficial de GitHub u otro].
+Descargas oficiales:
+  🔗 https://github.com/SalvadorPalmaRodriguez/enola-server-2025
 
 Responsabilidad:
-- La aplicación se ofrece "tal cual". El Creador no se hace responsable de daños derivados de su uso.
+  ⚠️ Se ofrece "tal cual", sin garantías de ningún tipo.
 
-Contacto para licencias comerciales o educativas:
-- Salvador Palma Rodríguez
-- [correo electrónico o formulario de contacto]
+Contacto para licencias comerciales:
+  📧 Salvador Palma Rodríguez
+  📧 salvadorpalmarodriguez@gmail.com
+  🔗 https://www.linkedin.com/in/salvadorpalmarodriguez/
 
-Para detalles legales completos, consulta LICENSE_FULL.txt.
-==========================================================
-Al continuar, aceptas estos términos.
-==========================================================
+===========================================================
+Para detalles legales completos, consulta LICENSE (raíz).
+Al usar este software, aceptas estos términos.
 
+Esta licencia se rige por la legislación vigente en España,
+incluyendo la normativa de propiedad intelectual, los tratados
+internacionales ratificados por España y la normativa de la
+Unión Europea aplicable.
+===========================================================

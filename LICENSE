@@ -1,7 +1,15 @@
-ENOLA SERVER - LICENCIA DE USO NO COMERCIAL
-============================================
+ENOLA SERVER - LICENCIA DE USO NO COMERCIAL v1.0
+=================================================
+
+SPDX-License-Identifier: LicenseRef-EnolaNC-1.0
 
 Copyright (c) 2025 Salvador Palma Rodríguez
+Todos los derechos reservados.
+
+El titular (Salvador Palma Rodríguez) se reserva el derecho exclusivo de 
+comercializar, licenciar o autorizar el uso comercial del software.
+
+─────────────────────────────────────────────────────────────────────────
 
 TÉRMINOS Y CONDICIONES DE USO
 
@@ -157,60 +165,53 @@ TÉRMINOS Y CONDICIONES DE USO
    automáticamente si se viola cualquiera de estos términos. En caso de 
    terminación, debe cesar todo uso del Software y destruir todas las copias.
 
-10. LEY APLICABLE
+10. LEY APLICABLE Y JURISDICCIÓN
 
-    Esta licencia se regirá e interpretará de acuerdo con las leyes aplicables,
-    sin tener en cuenta sus disposiciones sobre conflictos de leyes.
+    Esta licencia se rige e interpreta de acuerdo con la legislación 
+    vigente en España, incluyendo la normativa de propiedad intelectual, 
+    los tratados internacionales ratificados por España y la normativa 
+    de la Unión Europea aplicable.
 
 11. CONTACTO
 
     Para consultas sobre licencias comerciales o permisos especiales:
     Salvador Palma Rodríguez
     Email: salvadorpalmarodriguez@gmail.com
+    LinkedIn: https://www.linkedin.com/in/salvadorpalmarodriguez/
     
     Para reportar violaciones de licencia:
     Email: salvadorpalmarodriguez@gmail.com
     
-    Para más información sobre el proyecto:
+    Repositorio oficial:
     https://github.com/SalvadorPalmaRodriguez/enola-server-2025
 
-============================================
+─────────────────────────────────────────────────────────────────────────
 
-RESUMEN EN LENGUAJE SIMPLE (no sustituye los términos legales anteriores):
+RESUMEN EN LENGUAJE SIMPLE
+(Este resumen es informativo y no sustituye los términos legales anteriores)
 
 ✅ PUEDES:
-- Descargar e instalar Enola Server desde el repositorio oficial
-- Usar Enola Server para proyectos personales y educativos
-- Estudiar el código fuente para aprender
-- Crear forks públicos para estudio, auditoría o proponer mejoras
-- Modificar el código en tu fork para propósitos no comerciales
-- Contribuir al proyecto mediante Issues, Discussions y Pull Requests
-- Participar en el monitoreo comunitario de violaciones de licencia
+   • Descargar e instalar Enola Server desde el repositorio oficial
+   • Usar Enola Server para proyectos personales y educativos
+   • Estudiar el código fuente para aprender
+   • Crear forks públicos para estudio, auditoría o proponer mejoras
+   • Modificar el código en tu fork para propósitos no comerciales
+   • Contribuir al proyecto mediante Issues, Discussions y Pull Requests
 
 ❌ NO PUEDES:
-- Usar Enola Server (original o fork) en empresas o con fines comerciales
-- Vender el software, licencias o servicios basados en él
-- Comercializar tu fork o modificaciones
-- Usar forks para distribución no autorizada
-- Competir comercialmente con Enola Server
-- Remover los avisos de copyright
+   • Usar Enola Server (original o fork) en empresas o con fines comerciales
+   • Vender el software, licencias o servicios basados en él
+   • Comercializar tu fork o modificaciones
+   • Usar forks para distribución no autorizada
+   • Competir comercialmente con Enola Server
+   • Remover los avisos de copyright
 
-💡 TRANSPARENCIA Y FORKS:
-El código está disponible públicamente y los forks están PERMITIDOS 
-para estudio, auditoría y colaboración. Todos los forks son monitoreados 
-públicamente para proteger la licencia. Esta apertura demuestra calidad 
-y permite a la comunidad contribuir a la seguridad del proyecto.
+💡 TRANSPARENCIA:
+   El código está disponible públicamente y los forks están PERMITIDOS 
+   para estudio, auditoría y colaboración. Esta apertura demuestra calidad 
+   y permite a la comunidad contribuir a la seguridad del proyecto.
 
-🔍 MONITOREO COMUNITARIO:
-La comunidad puede usar `scripts/monitor_forks.sh` para vigilar el 
-cumplimiento de esta licencia. Se agradece reportar violaciones.
+📧 ¿Necesitas uso comercial o licencia Enterprise?
+   Contacta: salvadorpalmarodriguez@gmail.com
 
-�� ¿Necesitas uso comercial, redistribución comercial o licencia Enterprise?
-Contacta: salvadorpalmarodriguez@gmail.com
-
-🤝 PARA LA COMUNIDAD:
-Esta licencia protege el proyecto para asegurar su desarrollo sostenible
-a largo plazo. Tu uso personal, forks educativos y contribuciones están 
-completamente permitidos y valorados.
-
-============================================
+─────────────────────────────────────────────────────────────────────────

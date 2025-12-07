@@ -59,25 +59,47 @@ Personas que quieren denunciar corrupción, negligencias médicas, estafas, acos
 
 ### Requisitos
 
-- Debian 11/12
+- Debian 11/12 (o derivados como Ubuntu)
 - 1GB RAM mínimo, 2GB recomendado
 - Conexión a internet
 
-### Desde Release (Recomendado)
+### Método 1: Instalación Manual (Recomendado)
+
+Usa `apt` para instalar el paquete — resolverá dependencias automáticamente.
 
 ```bash
 # Descargar última versión
 wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.0.0-rc/enola-server_1.0.0-rc_all.deb
 
-# Instalar
-sudo dpkg -i enola-server_1.0.0-rc_all.deb
-sudo apt-get install -f  # Resolver dependencias si es necesario
+# Instalar con apt (resuelve dependencias automáticamente)
+sudo apt update
+sudo apt install -y ./enola-server_1.0.0-rc_all.deb
 
-# Ejecutar
+# Ejecutar menú principal
 sudo enola-server
 ```
 
-### Desde Código Fuente
+### Método 2: Script Instalador (Para Usuarios Novatos)
+
+Si prefieres un instalador que haga todo automáticamente:
+
+```bash
+# Descargar paquete y script instalador
+wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.0.0-rc/enola-server_1.0.0-rc_all.deb
+wget https://raw.githubusercontent.com/SalvadorPalmaRodriguez/enola-server-2025/main/scripts/install_and_deps.sh
+
+# Ejecutar instalador
+chmod +x install_and_deps.sh
+sudo ./install_and_deps.sh ./enola-server_1.0.0-rc_all.deb
+```
+
+El script `install_and_deps.sh`:
+- ✅ Actualiza índices de paquetes
+- ✅ Instala todas las dependencias necesarias
+- ✅ Instala el paquete .deb
+- ✅ Ejecuta verificación post-instalación
+
+### Método 3: Desde Código Fuente (Desarrolladores)
 
 ```bash
 # Clonar repositorio
@@ -87,8 +109,9 @@ cd enola-server-2025
 # Construir paquete
 bash scripts/build.sh
 
-# Instalar
-sudo dpkg -i enola-server_1.0.0_all.deb
+# Instalar con apt
+sudo apt update
+sudo apt install -y ./enola-server_1.0.0_all.deb
 ```
 
 ---
