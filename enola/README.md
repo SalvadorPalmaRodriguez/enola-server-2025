@@ -79,11 +79,11 @@ sudo apt install ufw fwknop-client fzf xclip toilet
 
 ```bash
 # Descargar el paquete
-wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.1.0/enola-server_1.0.0_all.deb
+wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.1.0/enola-server_1.1.0_all.deb
 
 # Instalar con apt (resuelve dependencias automáticamente)
 sudo apt update
-sudo apt install -y ./enola-server_1.0.0_all.deb
+sudo apt install -y ./enola-server_1.1.0_all.deb
 
 # Verificar instalación
 sudo enola-server --smoke
@@ -95,12 +95,12 @@ El script `install_and_deps.sh` automatiza todo el proceso:
 
 ```bash
 # Descargar paquete y script
-wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.1.0/enola-server_1.0.0_all.deb
+wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.1.0/enola-server_1.1.0_all.deb
 wget https://raw.githubusercontent.com/SalvadorPalmaRodriguez/enola-server-2025/main/scripts/install_and_deps.sh
 
 # Ejecutar instalador
 chmod +x install_and_deps.sh
-sudo ./install_and_deps.sh ./enola-server_1.0.0_all.deb
+sudo ./install_and_deps.sh ./enola-server_1.1.0_all.deb
 ```
 
 ### Verificación Post-Instalación
@@ -509,6 +509,6 @@ Por favor contacta: salvadorpalmarodriguez@gmail.com
 **¿Listo para desplegar servicios Onion profesionales?**
 
 ```bash
-sudo dpkg -i enola-server_1.0.0_all.deb
+sudo dpkg -i enola-server_1.1.0_all.deb
 sudo enola-server
 ```

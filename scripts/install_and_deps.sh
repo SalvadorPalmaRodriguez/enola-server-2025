@@ -5,7 +5,7 @@ set -euo pipefail
 # Copyright (c) 2025 Salvador Palma Rodríguez
 # Licensed under: ENOLA SERVER - LICENCIA DE USO NO COMERCIAL v1.0
 # =============================================================================
-# Uso: sudo ./install_and_deps.sh ./enola-server_1.0.0_all.deb
+# Uso: sudo ./install_and_deps.sh ./enola-server_1.1.0_all.deb
 #
 # Este script:
 #   1. Actualiza los índices de paquetes
@@ -19,7 +19,7 @@ if [[ -z "$PKG_PATH" ]]; then
   echo "Uso: sudo $0 ./enola-server_...deb"
   echo ""
   echo "Ejemplo:"
-  echo "  sudo ./install_and_deps.sh ./enola-server_1.0.0_all.deb"
+  echo "  sudo ./install_and_deps.sh ./enola-server_1.1.0_all.deb"
   exit 2
 fi
 
