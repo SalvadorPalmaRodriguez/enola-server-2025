@@ -1,6 +1,6 @@
 # 🔧 Scripts de Enola Server
 
-Esta carpeta contiene scripts de utilidad para desarrollo, construcción y monitoreo.
+Esta carpeta contiene scripts de utilidad para desarrollo, construcción, releases y monitoreo.
 
 ---
 
@@ -15,7 +15,7 @@ bash scripts/build.sh
 ```
 
 **Salida:**
-- `enola-server_1.0.0_all.deb` - Paquete instalable
+- `enola-server_1.1.0_all.deb` - Paquete instalable
 
 ---
 
@@ -32,6 +32,53 @@ bash scripts/clean.sh
 ```
 
 ⚠️ **ADVERTENCIA:** Este script es destructivo. Solo usar en entornos de desarrollo.
+
+---
+
+## 🚀 Scripts de Release
+
+### `release_update.sh`
+
+Automatiza completamente el proceso de actualización de releases en GitHub.
+
+**Dos modos de uso:**
+
+#### Modo 1: Actualizar a nueva versión
+Actualiza todas las referencias de versión, reconstruye el .deb, hace commit/push, actualiza tag y sube a GitHub Releases.
+
+```bash
+./scripts/release_update.sh 1.2.0
+```
+
+#### Modo 2: Sincronizar release actual
+Solo sincroniza el tag y el asset con el último commit de main (sin cambiar versión). Útil cuando haces cambios menores y quieres que la release refleje el código más reciente.
+
+```bash
+./scripts/release_update.sh --sync
+```
+
+**Qué hace el script:**
+1. ✅ Actualiza referencias de versión en README, control, PRODUCT_BRIEF
+2. ✅ Reconstruye el paquete .deb con el nombre correcto
+3. ✅ Hace commit y push a main
+4. ✅ Actualiza/crea el tag de GitHub
+5. ✅ Sube el .deb a GitHub Releases
+
+**Requisitos:**
+- Estar en la rama `main`
+- No tener cambios sin commit (o usar `--sync` que hace commit automático)
+- GitHub CLI (`gh`) instalado y autenticado
+
+---
+
+### `install_and_deps.sh`
+
+Instalador para usuarios novatos que automatiza la instalación de dependencias y el paquete.
+
+**Uso:**
+```bash
+sudo ./scripts/install_and_deps.sh ./enola-server_1.1.0_all.deb
+```
 
 ---
 

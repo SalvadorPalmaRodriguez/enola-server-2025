@@ -151,6 +151,7 @@ http://<tu-direccion>.onion
 - **[README Completo](enola/README.md)** - Documentación detallada del servidor
 - **[Configuración SSH Cliente](docs/CLIENT_SSH_SETUP.md)** - Cómo conectar vía SSH
 - **[Product Brief](PRODUCT_BRIEF.md)** - Presentación para inversores
+- **[Scripts de Desarrollo](scripts/README.md)** - Documentación de scripts
 
 ### Scripts de Desarrollo
 
@@ -163,6 +164,12 @@ bash scripts/clean.sh
 
 # Generar claves SSH cliente
 bash scripts/client-keygen.sh
+
+# Actualizar release a nueva versión
+./scripts/release_update.sh 1.2.0
+
+# Sincronizar tag y asset con main actual (sin cambiar versión)
+./scripts/release_update.sh --sync
 ```
 
 ---
