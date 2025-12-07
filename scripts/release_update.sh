@@ -14,8 +14,11 @@
 #   6. Subir el nuevo .deb a la release de GitHub
 #
 # Uso:
-#   ./scripts/release_update.sh <nueva_version>
+#   ./scripts/release_update.sh <nueva_version>    # Actualizar a nueva versión
 #   ./scripts/release_update.sh 1.2.0
+#
+#   ./scripts/release_update.sh --sync             # Solo sincronizar tag y asset
+#                                                   # (sin cambiar versión)
 #
 # =============================================================================
 
@@ -55,8 +58,87 @@ log_error() {
 }
 
 # =============================================================================
+# Función: Solo sincronizar tag y asset (sin cambiar versión)
+# =============================================================================
+
+sync_release() {
+    echo ""
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "  🧅 Enola Server - Sincronizar Release"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo ""
+    
+    # Obtener versión actual
+    local VERSION=$(grep "^Version:" enola/DEBIAN/control | awk '{print $2}')
+    local TAG_NAME="v${VERSION}"
+    local DEB_FILE="enola-server_${VERSION}_all.deb"
+    
+    log_info "Versión actual: $VERSION"
+    log_info "Tag: $TAG_NAME"
+    
+    # Verificar si hay cambios sin commit
+    if ! git diff --quiet HEAD 2>/dev/null; then
+        log_info "[1/4] Hay cambios pendientes, haciendo commit..."
+        git add -A
+        git commit -m "chore: Sincronizar release v${VERSION}"
+        git push origin main
+        log_success "  Commit y push completados"
+    else
+        log_info "[1/4] No hay cambios pendientes"
+    fi
+    
+    # Reconstruir .deb
+    log_info "[2/4] Reconstruyendo paquete .deb..."
+    rm -f enola-server_*.deb
+    bash scripts/build.sh > /dev/null 2>&1
+    
+    # Renombrar si es necesario
+    local BUILT_DEB=$(ls -t enola-server_*.deb 2>/dev/null | head -1)
+    if [[ -n "$BUILT_DEB" ]] && [[ "$BUILT_DEB" != "$DEB_FILE" ]]; then
+        mv "$BUILT_DEB" "$DEB_FILE"
+    fi
+    log_success "  Paquete: $DEB_FILE"
+    
+    # Actualizar tag
+    log_info "[3/4] Actualizando tag $TAG_NAME..."
+    git tag -d "$TAG_NAME" 2>/dev/null || true
+    git tag "$TAG_NAME"
+    git push origin --delete "$TAG_NAME" 2>/dev/null || true
+    git push origin "$TAG_NAME"
+    log_success "  Tag actualizado al commit: $(git rev-parse --short HEAD)"
+    
+    # Actualizar asset en release
+    log_info "[4/4] Actualizando asset en GitHub..."
+    if gh release view "$TAG_NAME" > /dev/null 2>&1; then
+        gh release delete-asset "$TAG_NAME" "$DEB_FILE" --yes 2>/dev/null || true
+        gh release upload "$TAG_NAME" "$DEB_FILE"
+        log_success "  Asset actualizado: $DEB_FILE"
+    else
+        log_warning "  No existe release para $TAG_NAME, creándola..."
+        gh release create "$TAG_NAME" "$DEB_FILE" --title "v${VERSION}" --notes "Release v${VERSION}"
+        log_success "  Release creada"
+    fi
+    
+    echo ""
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "  ✅ Sincronización completada"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo ""
+    echo "  🏷️  Tag:     $TAG_NAME → $(git rev-parse --short HEAD)"
+    echo "  📦 Asset:   $DEB_FILE (actualizado)"
+    echo "  🔗 Release: https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/$TAG_NAME"
+    echo ""
+    exit 0
+}
+
+# =============================================================================
 # Validaciones
 # =============================================================================
+
+# Verificar si es modo sync
+if [[ "${1:-}" == "--sync" ]] || [[ "${1:-}" == "-s" ]]; then
+    sync_release
+fi
 
 # Verificar argumentos
 if [[ $# -lt 1 ]]; then
@@ -64,12 +146,15 @@ if [[ $# -lt 1 ]]; then
     echo "  🧅 Enola Server - Actualización de Release"
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo ""
-    echo "Uso: $0 <nueva_version>"
+    echo "Uso:"
+    echo "  $0 <nueva_version>    Actualizar a nueva versión"
+    echo "  $0 --sync             Solo sincronizar tag y asset"
     echo ""
-    echo "Ejemplo:"
-    echo "  $0 1.2.0"
+    echo "Ejemplos:"
+    echo "  $0 1.2.0              Actualiza todo a v1.2.0"
+    echo "  $0 --sync             Sincroniza tag y .deb con main actual"
     echo ""
-    echo "Este script:"
+    echo "El script:"
     echo "  1. Actualiza todas las referencias de versión"
     echo "  2. Reconstruye el paquete .deb"
     echo "  3. Hace commit y push a main"
