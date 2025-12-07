@@ -76,7 +76,7 @@ bash scripts/monitor_forks.sh
 **Salida ejemplo:**
 ```
 ╔════════════════════════════════════════════════════════════════╗
-║     🔍 MONITOREO DE FORKS - ENOLA SERVER v1.0.0              ║
+║     🔍 MONITOREO DE FORKS - ENOLA SERVER v1.1.0              ║
 ╚════════════════════════════════════════════════════════════════╝
 
 📋 Total de forks encontrados: 3

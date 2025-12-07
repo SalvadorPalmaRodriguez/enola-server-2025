@@ -1,11 +1,11 @@
 Package: enola-server
-Version: 1.0.0
+Version: 1.1.0
 Section: base
 Priority: optional
 Architecture: all
 Maintainer: Salvador Palma Rodríguez <salvadorpalmarodriguez@gmail.com>
 Description: Sistema de gestión de servicios Onion con WordPress, auto-mantenimiento y seguridad avanzada
- Enola Server v1.0.0 - Sistema completo de gestión de servicios Tor Onion
+ Enola Server v1.1.0 - Sistema completo de gestión de servicios Tor Onion
  .
  Características principales:
  • Gestión automatizada de servicios Onion (Hidden Services)

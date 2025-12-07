@@ -12,7 +12,7 @@ Consulta el archivo LICENSE para detalles completos.
 
 > **Sistema completo de gestión de servicios Onion con auto-mantenimiento**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-rc-blue.svg)](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/v1.1.0)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/v1.1.0)
 [![License](https://img.shields.io/badge/license-Non--Commercial-orange.svg)](LICENSE)
 [![Debian](https://img.shields.io/badge/debian-package-red.svg)](https://www.debian.org/)
 
@@ -388,7 +388,7 @@ sudo journalctl -u <servicio> -n 200
 
 ## 🗺️ Roadmap
 
-### ✅ Completado (v1.0.0)
+### ✅ Completado (v1.1.0)
 
 | Fase | Características | Estado |
 |------|----------------|--------|

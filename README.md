@@ -12,7 +12,7 @@ Consulta el archivo LICENSE para detalles completos.
 
 > **Sistema profesional de gestión de servicios Onion (Tor Hidden Services) con auto-mantenimiento**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-rc-blue.svg)](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/v1.1.0)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/v1.1.0)
 [![License](https://img.shields.io/badge/license-Non--Commercial-orange.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Debian%2FUbuntu-red.svg)](https://www.debian.org/)
 
@@ -249,7 +249,7 @@ bash scripts/client-keygen.sh
 
 ## 📈 Estado del Proyecto
 
-### ✅ Completado (v1.0.0)
+### ✅ Completado (v1.1.0)
 
 | Fase | Características | Estado |
 |------|----------------|--------|
@@ -370,7 +370,7 @@ Por favor contacta: salvadorpalmarodriguez@gmail.com
 
 ---
 
-**🎉 ¡Bienvenido a Enola Server v1.0.0!**
+**🎉 ¡Bienvenido a Enola Server v1.1.0!**
 
 ```bash
 sudo dpkg -i enola-server_1.0.0_all.deb

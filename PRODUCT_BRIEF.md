@@ -8,10 +8,10 @@ Queda prohibido el uso en entornos empresariales, comerciales, SaaS, venta, o cu
 
 Consulta el archivo LICENSE para detalles completos.
 
-# 🚀 ENOLA SERVER v1.0.0-rc
+# 🚀 ENOLA SERVER v1.1.0
 ## Sistema Profesional de Gestión de Servicios Onion
 
-> **Estado:** Versión 1.0.0-rc - Release Candidate / Demo  
+> **Estado:** Versión 1.1.0 - Release Candidate / Demo  
 > **Fecha:** Noviembre 2025  
 > **Autor:** Salvador Palma Rodríguez  
 > **Licencia:** Uso No Comercial (autorización requerida para uso comercial)
@@ -332,12 +332,12 @@ Para casos de delitos graves, lo más importante y obligatorio es **denunciar a 
 | 15 | **HTTP Basic Auth** | ⭐⭐⭐⭐ | ALTA |
 | 16 | **Usuario dedicado (sin sudo)** | ⭐⭐⭐⭐⭐ | MUY ALTA |
 
-**Nota:** File Sharing es la única feature mencionada que **NO está implementada en v1.0.0**.
+**Nota:** File Sharing es la única feature mencionada que **NO está implementada en v1.1.0**.
 Se incluye en Fase 7 porque es complementaria a las capacidades de seguridad avanzada.---
 
 ### � MODELO DE NEGOCIO PROPUESTO
 
-### Versión Actual (v1.0.0)
+### Versión Actual (v1.1.0)
 - ✅ **Código disponible** para uso personal/educativo
 - ✅ **Licencia no comercial**
 - ✅ Soporte comunitario (GitHub Issues)
@@ -501,9 +501,9 @@ Si estás interesado en:
 ## 📄 LICENCIA Y COPYRIGHT
 
 **Copyright © 2025 Salvador Palma Rodríguez**  
-**Licencia:** Uso No Comercial (v1.0.0)
+**Licencia:** Uso No Comercial (v1.1.0)
 
-**Versión 1.0.0:**
+**Versión 1.1.0:**
 - ✅ Uso personal y educativo: **Disponible**
 - ✅ Forks para estudio/auditoría: **PERMITIDOS** 
 - ✅ Modificaciones en forks para uso no comercial: **PERMITIDAS**
@@ -526,7 +526,7 @@ Si estás interesado en:
 
 ## 🎉 CONCLUSIÓN
 
-**Enola Server v1.0.0** es un sistema **completo, probado y funcional** para gestionar servicios Onion con:
+**Enola Server v1.1.0** es un sistema **completo, probado y funcional** para gestionar servicios Onion con:
 
 ✅ **4 fases completadas** al 100%  
 ✅ **Sistema auto-mantenido** con health checks  
