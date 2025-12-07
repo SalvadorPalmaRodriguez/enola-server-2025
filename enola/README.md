@@ -8,11 +8,11 @@ Queda prohibido el uso en entornos empresariales, comerciales, SaaS, venta, o cu
 
 Consulta el archivo LICENSE para detalles completos.
 
-# 🧅 Enola Server v1.0.0-rc
+# 🧅 Enola Server v1.1.0
 
 > **Sistema completo de gestión de servicios Onion con auto-mantenimiento**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-rc-blue.svg)](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/v1.0.0-rc)
+[![Version](https://img.shields.io/badge/version-1.0.0-rc-blue.svg)](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/v1.1.0)
 [![License](https://img.shields.io/badge/license-Non--Commercial-orange.svg)](LICENSE)
 [![Debian](https://img.shields.io/badge/debian-package-red.svg)](https://www.debian.org/)
 
@@ -79,11 +79,11 @@ sudo apt install ufw fwknop-client fzf xclip toilet
 
 ```bash
 # Descargar el paquete
-wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.0.0-rc/enola-server_1.0.0-rc_all.deb
+wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.1.0/enola-server_1.0.0_all.deb
 
 # Instalar con apt (resuelve dependencias automáticamente)
 sudo apt update
-sudo apt install -y ./enola-server_1.0.0-rc_all.deb
+sudo apt install -y ./enola-server_1.0.0_all.deb
 
 # Verificar instalación
 sudo enola-server --smoke
@@ -95,12 +95,12 @@ El script `install_and_deps.sh` automatiza todo el proceso:
 
 ```bash
 # Descargar paquete y script
-wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.0.0-rc/enola-server_1.0.0-rc_all.deb
+wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.1.0/enola-server_1.0.0_all.deb
 wget https://raw.githubusercontent.com/SalvadorPalmaRodriguez/enola-server-2025/main/scripts/install_and_deps.sh
 
 # Ejecutar instalador
 chmod +x install_and_deps.sh
-sudo ./install_and_deps.sh ./enola-server_1.0.0-rc_all.deb
+sudo ./install_and_deps.sh ./enola-server_1.0.0_all.deb
 ```
 
 ### Verificación Post-Instalación

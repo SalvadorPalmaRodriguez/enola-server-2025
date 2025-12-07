@@ -12,7 +12,7 @@ Consulta el archivo LICENSE para detalles completos.
 
 > **Sistema profesional de gestión de servicios Onion (Tor Hidden Services) con auto-mantenimiento**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-rc-blue.svg)](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/v1.0.0-rc)
+[![Version](https://img.shields.io/badge/version-1.0.0-rc-blue.svg)](https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/tag/v1.1.0)
 [![License](https://img.shields.io/badge/license-Non--Commercial-orange.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Debian%2FUbuntu-red.svg)](https://www.debian.org/)
 
@@ -69,11 +69,11 @@ Usa `apt` para instalar el paquete — resolverá dependencias automáticamente.
 
 ```bash
 # Descargar última versión
-wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.0.0-rc/enola-server_1.0.0-rc_all.deb
+wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.1.0/enola-server_1.0.0_all.deb
 
 # Instalar con apt (resuelve dependencias automáticamente)
 sudo apt update
-sudo apt install -y ./enola-server_1.0.0-rc_all.deb
+sudo apt install -y ./enola-server_1.0.0_all.deb
 
 # Ejecutar menú principal
 sudo enola-server
@@ -85,12 +85,12 @@ Si prefieres un instalador que haga todo automáticamente:
 
 ```bash
 # Descargar paquete y script instalador
-wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.0.0-rc/enola-server_1.0.0-rc_all.deb
+wget https://github.com/SalvadorPalmaRodriguez/enola-server-2025/releases/download/v1.1.0/enola-server_1.0.0_all.deb
 wget https://raw.githubusercontent.com/SalvadorPalmaRodriguez/enola-server-2025/main/scripts/install_and_deps.sh
 
 # Ejecutar instalador
 chmod +x install_and_deps.sh
-sudo ./install_and_deps.sh ./enola-server_1.0.0-rc_all.deb
+sudo ./install_and_deps.sh ./enola-server_1.0.0_all.deb
 ```
 
 El script `install_and_deps.sh`:
